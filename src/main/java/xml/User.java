@@ -1,12 +1,14 @@
 package xml;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlRootElement(name="book")
 @XmlType(propOrder = {"id", "nom", "prenom"})
-public class user {
+public class User implements Serializable{
 
 	private Long id;
 	private String nom, prenom;
